@@ -6,11 +6,28 @@ const navbar_li = document.querySelectorAll("#menu li");
 
 const workProjects = document.querySelectorAll(".project-container");
 
+const videoreel= document.getElementById("videoreel");
+const videoiframe = document.getElementById("videoiframe");
+
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
-    let page = `./${project.getAttribute("id")}.html#Work`;
-    window.location.href = page;
+    //let page = `./${project.getAttribute("id")}.html#Work`;
+    //window.location.href = page;
+    
+    videoiframe.setAttribute("src" , project.dataset.projectvideourl);
+    videoreel.style.display="grid";
   });
+});
+
+//click event for the videoreel to hide
+videoreel.addEventListener("click", (event)=>{
+  cWindow = videoiframe.contentWindow;
+  //inorder to use the below code we need to append the following string "?enablejsapi=1" to the youtube url inorder to enable the api listening for YT
+  videoiframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
+    func: 'stopVideo' }), '*');
+  videoiframe.setAttribute("src" , "");
+  videoreel.style.display="none";
+    
 });
 
 //for the active links of the menu
@@ -29,15 +46,19 @@ const projectDivs = document.querySelectorAll(".project-title");
 for (let i = 0; i < projectDivs.length; i++) {
   projectDivs[i].addEventListener("mouseover", (event) => {
     projectDivs[i].style.opacity = "90%";
+    projectDivs[i].style.fontSize = "2rem";
   });
   projectDivs[i].addEventListener("mouseout", (event) => {
-    projectDivs[i].style.opacity = "0%";
+    projectDivs[i].style.opacity = "40%";
+    projectDivs[i].style.fontSize = "1rem";
   });
   projectDivs[i].addEventListener("touchenter", (event) => {
     projectDivs[i].style.opacity = "90%";
+    projectDivs[i].style.fontSize = "2rem";
   });
   projectDivs[i].addEventListener("touchleave", (event) => {
-    projectDivs[i].style.opacity = "0%";
+    projectDivs[i].style.opacity = "40%";
+    projectDivs[i].style.fontSize = "1rem";
   });
 }
 

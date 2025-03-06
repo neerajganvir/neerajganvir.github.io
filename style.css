@@ -176,10 +176,10 @@ div.project-title {
   align-items: center;
   min-height: 40vh;
   min-width: 40vw;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
   transition-property: all;
-  opacity: 0%;
-  font-size: 3rem;
+  opacity: 40%;
+  font-size: 1rem;
   word-wrap: break-word;
 }
 
@@ -188,6 +188,31 @@ div.project-container:hover {
   cursor: pointer;
   background-color: darkgoldenrod;
   font-size: xx-large;
+}
+
+section#videoreel{
+  height:100vh;
+  width:100vw;
+  background: goldenrod;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:10;
+  padding:0;
+  display:grid;
+  place-items:center;
+ display:none;
+}
+
+section#videoreel .container{
+  width:70vw;
+  box-shadow:0 2rem 3rem rgba(0,0,0,0.5); 
+}
+
+section#videoreel .container iframe{
+  width:100% !important;
+  height: 70vh !important;
+
 }
 
 /*Footer Section*/
