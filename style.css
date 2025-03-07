@@ -243,7 +243,7 @@ footer > span {
   }
 
   #logo {
-    width: 40vw;
+    width: 27vw;
   }
 
   section.side-bar {
@@ -257,7 +257,7 @@ footer > span {
 
 @media screen and (max-width: 800px) {
   #logo {
-    width: 40vw;
+    width: 27vw;
   }
 
   * {
