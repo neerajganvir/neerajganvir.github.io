@@ -318,11 +318,6 @@ footer > span {
     font-size: 2rem;
   }
 
-  #About div {
-    min-height: 20vh;
-    min-width: 60vw;
-  }
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -330,10 +325,7 @@ footer > span {
     min-height: 25vh;
     min-width: 60vw;
   }
-  #About div {
-    min-height: 25vh;
-    min-width: 60vw;
-  }
+  
 }
 
 @media screen and (min-width: 500px) {
