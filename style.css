@@ -156,6 +156,16 @@ section.side-bar a {
   padding-top: 10rem;
 }
 
+#About {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+}
+
 div.project-container {
   display: flex;
   justify-content: center;
@@ -168,6 +178,35 @@ div.project-container {
   transition-property: all;
   background-image: url("images/events.jpg");
 }
+
+.about-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color);
+  min-height: 40vh;
+  max-width: 40vw;
+  margin: 20px;
+  padding: 30px;
+  font-size: initial;
+  transition: 1s ease;
+  transition-property: all;
+  background-image: url("images/events.jpg");
+}
+
+.my-image {
+  background-image: url("images/myHeadshot3.jpg");
+  background-repeat: no-repeat;
+  background-position:bottom;
+  background-size: cover;
+  height: 20vh;
+  width: 20vw;
+}
+
+.intro-content {
+  text-align: justify;
+}
+
 
 div.project-title {
   background-color: darkgoldenrod;
@@ -188,6 +227,13 @@ div.project-container:hover {
   cursor: pointer;
   background-color: darkgoldenrod;
   font-size: xx-large;
+}
+
+
+.about-div:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  background-color: darkgoldenrod;
 }
 
 section#videoreel{
@@ -271,10 +317,20 @@ footer > span {
   div.project-title {
     font-size: 2rem;
   }
+
+  #About div {
+    min-height: 20vh;
+    min-width: 60vw;
+  }
+
 }
 
 @media screen and (max-width: 1000px) {
   #Work div {
+    min-height: 25vh;
+    min-width: 60vw;
+  }
+  #About div {
     min-height: 25vh;
     min-width: 60vw;
   }
