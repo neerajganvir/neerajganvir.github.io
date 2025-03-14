@@ -318,12 +318,22 @@ footer > span {
     font-size: 2rem;
   }
 
+  #About div {
+    height: 30vh;
+    width: 40vw;
+  }
+
 }
 
 @media screen and (max-width: 1000px) {
   #Work div {
     min-height: 25vh;
     min-width: 60vw;
+  }
+
+  #About div {
+    height: 30vh;
+    width: 40vw;
   }
   
 }
