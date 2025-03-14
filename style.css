@@ -318,7 +318,7 @@ footer > span {
     font-size: 2rem;
   }
 
-  #About div {
+  .my-image {
     height: 30vh;
     width: 40vw;
   }
@@ -331,10 +331,6 @@ footer > span {
     min-width: 60vw;
   }
 
-  #About div {
-    height: 30vh;
-    width: 40vw;
-  }
   
 }
 
