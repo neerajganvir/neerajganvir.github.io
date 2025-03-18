@@ -11,11 +11,15 @@ const videoiframe = document.getElementById("videoiframe");
 
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
-    //let page = `./${project.getAttribute("id")}.html#Work`;
-    //window.location.href = page;
-    
-    videoiframe.setAttribute("src" , project.dataset.projectvideourl);
-    videoreel.style.display="grid";
+   
+    //check if the project is studio360 then take it to the website
+    if(project.dataset.studio360 == true || project.dataset.studio360 == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
+    }else{//take it to the video reel
+      videoiframe.setAttribute("src" , project.dataset.projectvideourl);
+      videoreel.style.display="grid";
+    }    
   });
 });
 

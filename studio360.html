@@ -1,50 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neeraj Ganvir</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <div id="logoRole">
-        <a href="#Work"><div id="logo"></div></a>
-        <div id="role">
-          <span>editor</span> <span>designer | engineer</span>
+<head>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="s360assets/favicon.png">
+    <!-- google font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+    <!-- title -->
+    <title>Studio 360</title>
+
+    <link rel="stylesheet" href="s360assets/css/style.css?id=1" />
+    <link href="s360assets/aos/aos.css" rel="stylesheet" />
+
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <!-- logo -->
+            <div class="order-0 logo-flex">
+              <a href="index.html" class="navbar-brand block">
+                  <img alt="" class="h-7 w-auto md:h-[36px] md:w-[257px]" style="width: 100px; height:100px" src="images/logo.png">
+              </a>
+              <a href="#" class="navbar-brand block">
+                    <img alt="" class="h-7 w-auto md:h-[36px] md:w-[257px]" style="width: 100px; height:100px" src="s360assets/logo.png">
+                  </a>
+            </div>
+            <!-- navbar toggler -->
+            <input id="nav-toggle" type="checkbox" class="hidden">
+            <label id="show-button" for="nav-toggle" class="order-2 flex cursor-pointer items-center lg:order-1 lg:hidden">
+                <svg class="h-6 fill-current" viewBox="0 0 20 20">
+                    <title>Menu Open</title>
+                    <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+                </svg>
+            </label>
+            <label id="hide-button" for="nav-toggle" class="order-2 hidden cursor-pointer items-center lg:order-1">
+                <svg class="h-6 fill-current" viewBox="0 0 20 20">
+                    <title>Menu Close</title>
+                    <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)"></polygon>
+                </svg>
+            </label>
+            <!-- /navbar toggler -->
+
+            <ul id="nav-menu" class="navbar-nav order-3 hidden w-full flex-col pt-10 text-center lg:order-1 lg:flex lg:w-auto lg:flex-row lg:space-x-2 lg:pt-0 lg:text-left">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] active scroll nav-item">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] scroll nav-item">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] scroll nav-item">
+                        Features
+                    </a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a href="#student" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] scroll nav-item">
+                    Components
+                  </a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="#payasyougo" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] scroll nav-item">
+                        Service Plan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#wegotthis" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] scroll nav-item">
+                        Support
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] false scroll nav-item">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="wrapHead">
+
+      <section id="home">
+        <div class="relative overflow-hidden">
+            <div class="container relative">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="row relative z-10 justify-center px-7 pb-10 pt-20 2xl:px-48" data-aos="fade-up">
+                            <div class="rellax -z-10 px-0 lg:col-10 xl:px-6 section-title" data-rellax-speed="-3">
+                                <h1 class="md:text-h2-md mb-12 text-center text-h2-sm font-semibold lg:text-h2" data-aos="fade-up">Studio 360</h1>
+                                <h2>A streamlined studio management tool</h2>
+                            </div>
+                        </div>
+                        <div class="relative z-40" data-aos="fade-up" data-aos-delay="300">
+                            <div class="row justify-center">
+                                <div class="col-12">
+                                    <img src="s360assets/images/bannerimage.png" height="630" height="1110" alt="banner" class="max-w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center" data-aos="fed-up">
+                    <div class="section-title animate__fadeInUp mt-11">
+                        <h2 class="title" data-aos="fade-up">S360 as a tool </h2>
+                        <div class="content adjust-content" data-aos="fade-up">
+                            <li>
+                                S360 tool provides a set of streamlined processes to manage all the administrative tasks
+                                and day-to-day activities for the members of the studio.
+                            </li>
+                            <li>
+                                It allows the students to create their profile and apply to different programs offered by
+                                the Studio and helps them in their journey right from becoming a student in the studio
+                                till the completion of their program.
+                            </li>
+                            <li>
+                                It provides the Faculty and Staff of the Studio with tools to handle all of their
+                                day-to-day activities, admissions of students, their onboarding and interviewing,
+                                managing curriculum and classes, basically everything right from the admission of the
+                                student till their graduation more effectively and efficiently.
+                            </li>
+                            <li>
+                                Provides the administrative staff with privileges to override any critical decisions on
+                                every user account and help maintain the transparency throughout the studio.
+                            </li>
+                            <li>
+                                Depending on the nature of users accessing the tool, there are 3 specific modules;
+                                Student Module, Faculty Module, Staff/Admin Module.
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row bg-primary/5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="section-title mt-13">
+                        <h2 class="title">S360 Features</h2>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/studio.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Studio Dashboard</h3>
+                        <p class="text-sm leading-6">
+                            We like to keep things organised with all
+                            your data and information in place so you don't
+                            have to navigate through different menus to get
+                            where you're headed. Now get all your critical
+                            information, tasks, data, and quick links available
+                            to you on dashboard.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/User_management.png">
+                        <h3 class="mb-3 text-h4  font-semibold">User Management</h3>
+                        <p class="text-sm leading-6">
+                            Manage all the members of the studio in
+                            one place. Create users, control their accessibility
+                            via permissions, managing their account with full
+                            admin overriding capability leaves you on top of
+                            your game.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Admissions_Center.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Admission Center</h3>
+                        <p class="text-sm leading-6">
+                            Student Application Management with real
+                            time updates, efficient onboarding and
+                            interviewing processes made life so much easier for
+                            you. It keeps you updated, organised, saves your
+                            time, effort and also most importantly trees since
+                            there is no paperwork involved.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Tuition_Management.png">
+                        <h3 class="mb-3 text-h4  font-semibold">
+                            Tuition Management
+                        </h3>
+                        <p class="text-sm leading-6">
+                            Ability to manage all the tuition fees
+                            associated with curriculum and specific to the
+                            students based on their choice of program and
+                            payment plan. Overriding the payment structure
+                            providing full flexibility to cater to the individuals
+                            requests.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Curriculum Designer.png">
+                        <h3 class="mb-3 text-h4  font-semibold">
+                            Curriculum Designer
+                        </h3>
+                        <p class="text-sm leading-6">
+                            Flexible and customizable curriculum
+                            designer provides the admin workforce tools to
+                            design classes, courses, programs and workshops
+                            offered in a calendar year of the studio. Powered
+                            by Clone Curriculum functionality to reuse the
+                            existing curriculum in future calendar years.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Document_Manager.png">
+                        <h3 class="mb-3 text-h4  font-semibold">
+                            Document Manager
+                        </h3>
+                        <p class="text-sm leading-6">
+                            The best part is that all your processes
+                            become 100% paperless. You can simply provide
+                            documentation like acceptance letters, Completion
+                            certificates, International Student documents,
+                            Receipts, etc. in the drop box section of each and
+                            every student account.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Publishing.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Publisher</h3>
+                        <p class="text-sm leading-6">
+                            Keep everyone updated with what is going on in
+                            the studio. Publish announcements, notices, events etc.
+                            with instant emails and updates on dashboards of the
+                            targeted members. This seamless integration with the
+                            components like Calendar and Notification center will
+                            not let anyone miss out on any crucial information.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Calendar.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Calendar</h3>
+                        <p class="text-sm leading-6">
+                            Keeping track of all the events, whether
+                            it's an Application Acceptance Period, Enrollment
+                            Period, Scheduled Interviews, Scheduled Classes
+                            Announcements etc. Our Calendar keeps it
+                            organized for you, providing the user with an
+                            overview of their day, week and month.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Notification_Center.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Notification Center</h3>
+                        <p class="text-sm leading-6">
+                            We offer a well-planned reminder system so
+                            you're able to deliver the right message at the right
+                            time. Whether it's a reminder about deadlines,
+                            processing payments, or even rolling out an important
+                            message to studio members, we send it all across.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Reporting.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Reporting</h3>
+                        <p class="text-sm leading-6">
+                            We know you want to preserve the data and
+                            work on getting insights from them. Reporting
+                            center keeps all the historical data and inform the
+                            users with the latest trends. Users can request for
+                            customized reports to get the data presented in a
+                            dashboard format.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Attendance_Feedback.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Attendance & Performance</h3>
+                        <p class="text-sm leading-6">
+                            Ability to record the attendance and
+                            performance for each and every student in the
+                            class ensures record keeping and transparency
+                            between all the members of the studio.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 lg:col-6 xl:col-6" data-aos="fade-up">
+                    <div class="mt-6 px-0 text-center md:px-[4.5rem]">
+                        <img alt="img" width="100" height="100" src="s360assets/images/Materials.png">
+                        <h3 class="mb-3 text-h4  font-semibold">Materials </h3>
+                        <p class="text-sm leading-6">
+                            Faculty and Staff can provide any kind of
+                            course materials like syllabus, reading materials,
+                            books in multitude of formats like PDF, PPTs, Word
+                            Docs, Video links etc. to the students by simply
+                            uploading them in the dedicated Materials section
+                            of the class.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="student">
+        <div class="container text-center">
+            <div class="row justify-center">
+                <div class="lg:col-12"></div>
+                <div class="relative z-30 py-20">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2 class="title">Student Onboarding</h2>
+                        <p>Onboarding journey of the student in S360 tool</p>
+                    </div>
+                    <div data-aos="fade-up">
+                        <img width="100%" src="s360assets/images/student-onboarding.png" alt="img" class="inline h-auto max-w-full" />
+                    </div>
+                </div>
+            </div>
+            <div class="has-circle has-bg-animate h-full" data-aos="fade-in">
+                <span class="top-[50px] left-[11%] ratio-32 "> </span>
+                <span class="top-[29%] left-[3%]ratio-85 fill "> </span>
+                <span class="top-[45%] left-[22%] ratio-20 fill"> </span>
+                <span class="bottom-[35%] left-[15%] ratio-47 "> </span>
+                <span class="bottom-[8%] left-[6%] ratio-62 "> </span>
+                <span class="top-[100px] right-[12%] ratio-20 fill "> </span>
+                <span class="top-[30%] right-[2%] ratio-73 "> </span>
+                <span class="top-[52%] right-[19%] "> </span>
+                <span class="top-[55%] right-[33%] ratio-20 fill "> </span>
+                <span class="bottom-[20%] right-[5%] ratio-65 fill "> </span>
+                <svg class="text-primary" style="opacity:.15" width="100%" height="100%" viewBox="0 0 1401 613" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 580C35.1785 462.015 166.359 247.408 425.652 332.866 749.767 439.688 890.318 302.84 946.338 181.583 1002.36 60.3256 1149.41-52.8479 14e2 35.4968" stroke="currentcolor" stroke-width="4" stroke-dasharray="10 10"></path>
+                    <path d="M1398 .999977C1364.87 125.95 1233.88 353.224 974.955 262.722 651.302 149.594 510.953 294.52 455.013 422.935S252.231 671.203 2.00002 577.644" stroke="currentcolor" stroke-width="4" stroke-dasharray="10 10"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section id="application" class="section">
+        <div class="container relative">
+            <div class="row bg-primary/5">
+                <div class="col-12 md:col-6 lg:col-12 order-0 md:order-0" data-aos="fade-up">
+                    <div class="content section-title" style="text-align: justify;">
+                        <h2 class="service-title">APPLICATION</h2>
+                        <li>Streamlined application process making life easy for the students, staff and faculty members of the studio.</li>
+                        <li>Real time active notification keeps you up to date with any changes made to the application/s during the process.</li>
+                        <li>Managing Applications, Scheduling Interviews, Communicating with Students made easier with Studio360 Admission Center.</li>
+                        <li>Onboarding students with proper documentation and materials required at the start of the application and at the end.</li>
+                        <li>Customisable Admission, Interviewing, and Application processes with flexible compatibility and scalability enables S360 to shape up however you like.</li>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-12 order-1 md:order-1" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="relative">
+                            <img src="s360assets/images/application.png" class="w-full max-w-full rounded-2xl w-100" width="575" height="511">
+                            <div class="has-circle z-30 h-full w-full">
+                                <span class="bottom-[50%] left-[2.5rem] ratio-20 fill"> </span>
+                                <span class="bottom-[4.93rem] left-[1.5rem] ratio-47 bg-primary/5 "> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="create" class="section">
+        <div class="container relative">
+            <div class="row">
+                <div class="col-12 md:col-6 lg:col-12 order-0 md:order-1" data-aos="fade-up">
+                    <div class="section-title content" style="text-align: justify;">
+                        <h2 class="service-title">CREATE</h2>
+                        <li>Let's you design the curriculum of the studio for the calendar year using built in components.</li>
+                        <li>Create new users of the studio with pre defined user types having specific permissions based on the user roles.</li>
+                        <li>Clone a designed curriculum of a specific year from the available list of curriculum calendar years.</li>
+                        <li>Customize as per your requirements for the studio calendar year.</li>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-12 order-1 md:order-0" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="relative">
+                            <img src="s360assets/images/create.png" class="w-full max-w-full rounded-2xl" width="381" height="436">
+                            <div class="has-circle z-30 h-full w-full">
+                                <span class="bottom-[50%] left-[2.5rem] ratio-20 fill"> </span>
+                                <span class="bottom-[4.93rem] left-[1.5rem] ratio-47 bg-primary/5 "> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container relative">
+            <div class="row bg-primary/5">
+                <div class="col-12 md:col-6 lg:col-12 order-0 md:order-0" data-aos="fade-up">
+                    <div class="section-title content" style="text-align: justify;">
+                        <h2 class="service-title">PUBLISHER</h2>
+                        <li>Studio360 Publisher Center keeps all the members of the studio updated with everything going on within the studio.</li>
+                        <li>Staff/Faculty can publish Announcements, Notices, and Events targeted to a specific audience making it available on their individual dashboards.</li>
+                        <li>Instant email notifications to the targeted audience on publishing and any changes made to the published item.</li>
+                        <li>Seamless integration with the inbuilt components of the Studio360 like the Calendar and Email Notifier cannot let users miss out on any crucial information.</li>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-12 order-1 md:order-1" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="relative">
+                            <img src="s360assets/images/publisher.png" class="w-full max-w-full rounded-2xl" width="381" height="436">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container relative">
+            <div class="row">
+                <div class="col-12 md:col-6 lg:col-12 order-0 md:order-1" data-aos="fade-up">
+                    <div class="section-title content" style="text-align: justify;">
+                        <h2 class="service-title">DESIGN</h2>
+                        <li>Studio360 with its state of the art responsive design adapts with the screens of range of devices, providing the high level of user experience, accessibility and flexibility.</li>
+                        <li>Customisable Dark and Light themes catering to the needs of different types of users and their preferences.</li>
+                        <li>User specific dashboards colating the information and presenting in most effective and efficient manner enables the user to focus on what they actually need to address.</li>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-12 order-1 md:order-0" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="relative">
+                            <img src="s360assets/images/design.png" class="w-full max-w-full rounded-2xl" width="381" height="436">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="payasyougo">
+        <div class="container relative text-center">
+            <div class="row justify-center">
+                <div class="lg:col-12"></div>
+                <div class="relative z-30 py-20">
+                    <div class="section-title adjust-content" data-aos="fade-up">
+                        <h2 class="service-title">Pay As You Go</h2>
+                        <p>Customize and build your own service packages</p>
+                        <p class="mt-6">
+                            We offer the ad-hoc pay-as-you-go pricing model where instead of summing down a fixed package with predefined rates,
+                            you can opt for any of our services and pay only for what you actually use. The flexible pricing model not only allows
+                            you to save money, but also lets you choose what services you need and ability to size up or down - as you grow.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up">
+                        <img width="100%" src="s360assets/images/payasyougo.png" alt="img" class="inline h-auto max-w-full rounded-2xl" />
+                    </div>
+                </div>
+            </div>
+            <div class="has-circle has-bg-animate h-full" data-aos="fade-in">
+                <span class="top-[50px] left-[11%] ratio-32 "> </span>
+                <span class="top-[29%] left-[3%]ratio-85 fill "> </span>
+                <span class="top-[45%] left-[22%] ratio-20 fill"> </span>
+                <span class="bottom-[35%] left-[15%] ratio-47 "> </span>
+                <span class="bottom-[8%] left-[6%] ratio-62 "> </span>
+                <span class="top-[100px] right-[12%] ratio-20 fill "> </span>
+                <span class="top-[30%] right-[2%] ratio-73 "> </span>
+                <span class="top-[52%] right-[19%] "> </span>
+                <span class="top-[55%] right-[33%] ratio-20 fill "> </span>
+                <span class="bottom-[20%] right-[5%] ratio-65 fill "> </span>
+                <svg class="text-primary" style="opacity:.15" width="100%" height="100%" viewBox="0 0 1401 613" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 580C35.1785 462.015 166.359 247.408 425.652 332.866 749.767 439.688 890.318 302.84 946.338 181.583 1002.36 60.3256 1149.41-52.8479 14e2 35.4968" stroke="currentcolor" stroke-width="4" stroke-dasharray="10 10"></path>
+                    <path d="M1398 .999977C1364.87 125.95 1233.88 353.224 974.955 262.722 651.302 149.594 510.953 294.52 455.013 422.935S252.231 671.203 2.00002 577.644" stroke="currentcolor" stroke-width="4" stroke-dasharray="10 10"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section id="wegotthis" class="section">
+        <div class="container relative">
+            <div class="row">
+                <div class="w-100">
+                    <div class="mt-11 mb-0 section-title text-center content" data-aos="fade-up">
+                        <h2 class="title">We got this! </h2>
+                        <div class="content adjust-content">
+                            <h6>Get comprehensive support services with us at every stage of your business journey</h6>
+                            <li><strong>Support when you start</strong></li>
+                            <span>
+                                Adapting with new services and systems can be a tricky business, but our well-structured services and trained professionals will help you to implement our products efficiently.
+                                Besides simplified initialisation, we provide service consultation, explanatory sessions and client support to help you through any hurdle that you might face during the implementation and initial phases.
+                            </span>
+    
+                            <li><strong>Support when you use</strong></li>
+                            <span>
+                                Owning to the business of dealing with humans, our mission is to make services more personal, more human - and build lasting relations with all our clients.
+                                In the quest to forge better service modules, we not only offer complete support during the implementation phase, but keenly support on ensuring that the system keeps functioning smoothly and consistently. From answering your queries, providing assistance with ongoing services, troubleshooting, and resolving issues - we make sure that you get the best possible value from our services and product.
+                            </span>
+    
+                            <li><strong>Support as you grow</strong></li>
+                            <span>
+                                Dynamic businesses require dynamic solutions. To remain in pace with your ever-expanding teams and business scope, we offer highly scalable and adaptable services.
+                                Besides being scalable, we believe in remaining resilient with your future growth and deliver unmatchable customer experience through robust services and lasting support.
+                            </span>
+                            <h6>So sit back and relax, We got your back!</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact_" class="section pt-0 pb-0" style="display:none;">
+        <div class="container">
+            <div class="row items-center justify-center section-title bg-primary/5 mt-0 mb-0">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="section-title text-center mt-11" data-aos="fade-up">
+                        <p class="uppercase">Contact us</p><h2 class="title">
+                            Get In Touch
+                        </h2>
+                    </div>
+                </div>
+                <div class="mb-12 text-center md:col-8 lg:col-5 lg:mb-0" data-aos="fade-up">
+                    <div class="pr-0 lg:pr-12">
+                        <img alt="contact image" class="max-w-full img-fluid img-size" src="s360assets/images/contact.png" loading="lazy" decoding="async" >
+                    </div>
+                </div>
+                <div class="md:col-10 lg:col-5" data-aos="fade-up">
+                    <div class="rounded-2xl p-8 p-0 pb-10 shadow mb-12">
+                        <div class="mb-6 p-3">
+                            <h3 class="h5 font-semibold">Send A Message : Request Demo</h3>
+                        </div>
+                        <form class="forms-sample" data-ajax="true" id="frmsupport">
+                            <div class="mb-6">
+                                <label class="mb-2 block font-medium text-theme-dark/80" for="username">Full Name</label>
+                                <input class="form-control shadow-none" id="username" name="username" type="text" placeholder="Full Name" required="">
+                            </div>
+                            <div class="mb-6">
+                                <label class="mb-2 block font-medium text-theme-dark/80" for="email">Email Address</label>
+                                <input class="form-control shadow-none" id="email" type="email" name="email" placeholder="Email Address" required="">
+                            </div>
+                            <div class="mb-6">
+                                <label class="mb-2 block font-medium text-theme-dark/80" for="message">Your Message</label>
+                                <textarea class="form-control h-auto shadow-none" id="message" name="message" rows="4" required=""></textarea>
+                            </div>
+                            <div id="errorContainer" class="error-message"></div>
+                            <button class="btn btn-primary mt-6 w-full" id="btnSubmit" type="button" aria-label="Send Message">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+
+      </main>
+    <footer class="mt-24">
+        <div class="container" id="contact">
+    <div class="row justify-center pb-12">
+      <!-- <img src="~/assets/images/logoimg.png" class="w-full max-w-full rounded-2xl footer-img"> -->
+      <div class="col-12">
+        <div class="border-t pb-12"></div>
+      </div>
+      <div class="sm:col-6 md:col-6 lg:col-5">
+        <div class="pr-6">
+          <div class="order-0 mb-6">
+            <a href="#" class="navbar-brand block">
+              <img alt="logo" class="h-7 w-auto md:h-[36px] md:w-[257px]" style="width: 80px; height:80px" src="s360assets/logo.png" loading="lazy" decoding="async">
+            </a>
+          </div>
+          <p class="mb-0">
+            A streamlined studio management tool.
+          </p>
         </div>
       </div>
-      <div id="menu">
-        <ul>
-          <li><a href="./index.html#Work">work</a></li>
-          <li><a href="./about.html#About">about</a></li>
-        </ul>
+      
+      <div class="mt-12 sm:col-6 md:col-6 lg:col-3 lg:mt-0">
+        <div class="footer-widget">
+          <h4 class="h5 mb-6">Location &amp; Contact</h4>
+          <ul class="footer-links list-unstyled">
+            <li class="mb-4">
+              <h6>Sambhaji Solutions LLC</h6> 440 West 34th Street 6H, <br/>New York, NY, USA
+            </li>
+            <li>
+              <a class="hover:text-primary hover:underline" href="mailto:s360@sambhajisolutions.com">s360@sambhajisolutions.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="hamburger">
-        <span class="hamburger material-symbols-outlined"> menu </span>
+      <div class="mt-12 sm:col-6 md:col-6 lg:col-4 lg:mt-0">
+        <div class="footer-widget mt-12">
+          <h4 class="h5 mb-6"></h4>
+          <ul class="footer-links list-unstyled">
+            <li class="mb-4">
+              <h6>S Prime IT Solutions </h6>
+              Dattatray Apt., Choti Dhantoli,<br/>
+              Nagpur, Maharashtra, India 
+            </li>
+            <li>
+              <!-- <a class="hover:text-primary hover:underline" href="mailto:sprimeitsolutions@gmail.com">sprimeitsolutions@gmail.com</a> -->
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-    <section class="side-bar side-bar-hide">
-      <ul>
-        <li><a href="./index.html#Work">work</a></li>
-        <li><a href="./about.html#About">about</a></li>
-      </ul>
-    </section>
-    <section id="Work">
-      <div id="studio360" class="project-container">
-        <div class="project-title">studio360</div>
+    </div>
+    <div class="row justify-center border-t border-border py-6">
+      <div class="col-12 text-center">
+        <p class="content text-text">&#169; 2025 All Rights Reserved by Sambhaji Solutions LLC & SPrime IT | Powered by Studio360</a></p>
       </div>
-    </section>
-    <footer>
-      <span class="material-symbols-outlined"> copyright </span> &nbsp;
-      <span>All Rights Reserved to Neeraj Ganvir.</span>
-    </footer>
-    <script src="index.js"></script>
+    </div>
+  </div>
+</footer>
+
+<script src="s360assets/aos/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+  $(document).ready(function(){
+  var docEl = $(document),
+      headerEl = $('header'),
+      headerWrapEl = $('.wrapHead'),
+      navEl = $('nav'),
+      linkScroll = $('.scroll');
+  
+  docEl.on('scroll', function(){
+    if ( docEl.scrollTop() > 60 ){
+      headerEl.addClass('fixed-to-top');
+      headerWrapEl.addClass('fixed-to-top');
+      navEl.addClass('fixed-to-top');
+    }
+    else {
+      headerEl.removeClass('fixed-to-top');
+      headerWrapEl.removeClass('fixed-to-top');
+      navEl.removeClass('fixed-to-top');
+    }
+  });
+  
+  linkScroll.click(function(e){
+      e.preventDefault();
+      $('body, html').animate({
+         scrollTop: $(this.hash).offset().top
+      }, 500);
+   });
+});
+</script>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  function handleScroll() {
+    if (window.innerWidth > 600) {
+      let fromTop = window.scrollY + 50; 
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (fromTop >= sectionTop && fromTop <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const correspondingLink = document.querySelector(`nav a[href="#${section.id}"]`);
+          if (correspondingLink) {
+            correspondingLink.classList.add('active');
+          }
+        }
+      });
+    } else {
+      navLinks.forEach(link => link.classList.remove('active'));
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll); 
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navToggle.checked = false;
+      });
+    });
+  });
+  </script>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Reset previous error messages
+    document.getElementById('errorContainer').innerText = '';
+
+    var isValid = true;
+
+    if (name.trim() === '') {
+      displayErrorMessage('Please enter your Full Name');
+      isValid = false;
+    }
+
+    if (!isValidEmail(email)) {
+      displayErrorMessage('Please enter a valid Email Address');
+      isValid = false;
+    }
+
+    if (message.trim() === '') {
+      displayErrorMessage('Please enter your Message');
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  function isValidEmail(email) {
+    // Basic email validation using regex
+    var emailRegex = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function displayErrorMessage(message) {
+    var errorContainer = document.getElementById('errorContainer');
+    errorContainer.innerText += message + '\n';
+  }
+</script>
+
   </body>
+
 </html>
