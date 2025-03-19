@@ -3162,7 +3162,7 @@ input#nav-toggle:checked~#nav-menu {
 }
 
 .fill-current {
-    fill: currentColor
+    fill: beige;
 }
 
 .object-contain {

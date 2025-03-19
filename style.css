@@ -156,6 +156,20 @@ section.side-bar a {
   padding-top: 10rem;
 }
 
+#showreel{
+  background-image: url("/images/reel.Still001.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nescafe{
+  background-image: url("/images/nescafe.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #About {
   min-height: 60vh;
   display: flex;
@@ -194,6 +208,7 @@ div.project-container {
   background-image: url("images/events.jpg");
 }
 
+
 .my-image {
   background-image: url("images/myHeadshot3.jpg");
   background-repeat: no-repeat;
@@ -207,6 +222,10 @@ div.project-container {
   text-align: justify;
 }
 
+#contact {
+  display: flex;
+  justify-content: center;
+}
 
 div.project-title {
   background-color: darkgoldenrod;
