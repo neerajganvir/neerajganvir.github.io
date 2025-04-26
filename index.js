@@ -9,6 +9,8 @@ const workProjects = document.querySelectorAll(".project-container");
 const videoreel= document.getElementById("videoreel");
 const videoiframe = document.getElementById("videoiframe");
 const photoSection = document.getElementById("photos");
+const photoImage = document.getElementById("photoImage");
+const PhotoViewer = document.getElementById("PhotoViewer");
 
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
@@ -36,6 +38,12 @@ videoreel.addEventListener("click", (event)=>{
   videoiframe.setAttribute("src" , "");
   videoreel.style.display="none";
     
+});
+
+//to hide the photo viewer
+PhotoViewer.addEventListener("click",(event)=>{
+  photoImage.setAttribute("src" , "");
+  PhotoViewer.style.display="none";
 });
 
 //for the active links of the menu
@@ -86,7 +94,7 @@ hamburger.addEventListener("click", (event) => {
   }
 });
 
-//Loding photos
+//Loading photos
 var maxPhotoNumber = 18;
 for(let p=1; p<=maxPhotoNumber; p++){
   
@@ -95,5 +103,10 @@ for(let p=1; p<=maxPhotoNumber; p++){
   photoDiv.setAttribute("class", "photo-container");
   photoURL = "url('./photos/photo"+p+".jpeg')";
   photoDiv.style.backgroundImage = photoURL;
+  photoDiv.addEventListener("click",(event)=>{
+    PhotoViewer.style.display="grid";
+    photoImage.setAttribute("src", "./photos/photo"+p+".jpeg");
+    
+  });
   photoSection.append(photoDiv);
 }

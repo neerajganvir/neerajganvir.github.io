@@ -273,6 +273,13 @@ div.project-container:hover {
   font-size: xx-large;
 }
 
+div.photo-container:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  background-color: darkgoldenrod;
+  font-size: xx-large;
+}
+
 
 .about-div:hover {
   transform: scale(1.03);
@@ -302,6 +309,32 @@ section#videoreel .container{
 section#videoreel .container iframe{
   width:100% !important;
   height: 70vh !important;
+
+}
+
+section#PhotoViewer{
+  height:100vh;
+  width:100vw;
+  background: goldenrod;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:10;
+  padding:0;
+  display:grid;
+  place-items:center;
+ display:none;
+}
+
+section#PhotoViewer .container{
+  width:70vw;
+  box-shadow:0 2rem 3rem rgba(0,0,0,0.5); 
+}
+
+section#PhotoViewer .container img{
+  width:100% !important;
+  height: 70vh !important;
+  object-fit: contain;
 
 }
 
