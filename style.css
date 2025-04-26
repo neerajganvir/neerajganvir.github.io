@@ -156,6 +156,16 @@ section.side-bar a {
   padding-top: 10rem;
 }
 
+#photos {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+}
+
 #showreel{
   background-image: url("/images/reel.Still001.jpg");
   background-position: top;
@@ -191,6 +201,21 @@ div.project-container {
   transition: 1s ease;
   transition-property: all;
   background-image: url("images/events.jpg");
+}
+
+div.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color);
+  min-height: 40vh;
+  min-width: 40vw;
+  margin: 20px;
+  transition: 1s ease;
+  transition-property: all;
+  background-position: top;
+  background-repeat: no-repeat; 
+  background-size: contain;
 }
 
 .about-div {
@@ -333,6 +358,12 @@ footer > span {
     min-height: 20vh;
     min-width: 60vw;
   }
+
+  #photos div {
+    min-height: 20vh;
+    min-width: 60vw;
+  }
+
   div.project-title {
     font-size: 2rem;
   }
@@ -341,6 +372,10 @@ footer > span {
 
 @media screen and (max-width: 1000px) {
   #Work div {
+    min-height: 25vh;
+    min-width: 60vw;
+  }  
+  #photos div {
     min-height: 25vh;
     min-width: 60vw;
   }  

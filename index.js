@@ -8,12 +8,16 @@ const workProjects = document.querySelectorAll(".project-container");
 
 const videoreel= document.getElementById("videoreel");
 const videoiframe = document.getElementById("videoiframe");
+const photoSection = document.getElementById("photos");
 
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
    
     //check if the project is studio360 then take it to the website
     if(project.dataset.studio360 == true || project.dataset.studio360 == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
+    }else if(project.dataset.photography == true || project.dataset.photography == "true"){
       let page = `./${project.getAttribute("id")}.html`;
       window.location.href = page;
     }else{//take it to the video reel
@@ -81,3 +85,15 @@ hamburger.addEventListener("click", (event) => {
     hamburgerSpan.innerHTML = "menu";
   }
 });
+
+//Loding photos
+var maxPhotoNumber = 18;
+for(let p=1; p<=maxPhotoNumber; p++){
+  
+  var photoDiv = document.createElement("div");
+  photoDiv.setAttribute("id", "photo"+p);
+  photoDiv.setAttribute("class", "photo-container");
+  photoURL = "url('./photos/photo"+p+".jpeg')";
+  photoDiv.style.backgroundImage = photoURL;
+  photoSection.append(photoDiv);
+}
