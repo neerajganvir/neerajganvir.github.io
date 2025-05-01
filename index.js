@@ -95,7 +95,7 @@ hamburger.addEventListener("click", (event) => {
 });
 
 //Loading photos
-var maxPhotoNumber = 18;
+var maxPhotoNumber = 21;
 for(let p=1; p<=maxPhotoNumber; p++){
   
   var photoDiv = document.createElement("div");
