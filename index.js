@@ -22,6 +22,9 @@ workProjects.forEach((project) => {
     }else if(project.dataset.photography == true || project.dataset.photography == "true"){
       let page = `./${project.getAttribute("id")}.html`;
       window.location.href = page;
+    }else if(project.dataset.film == true || project.dataset.film == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
     }else{//take it to the video reel
       videoiframe.setAttribute("src" , project.dataset.projectvideourl);
       videoreel.style.display="grid";
@@ -105,8 +108,7 @@ for(let p=1; p<=maxPhotoNumber; p++){
   photoDiv.style.backgroundImage = photoURL;
   photoDiv.addEventListener("click",(event)=>{
     PhotoViewer.style.display="grid";
-    photoImage.setAttribute("src", "./photos/photo"+p+".jpeg");
-    
+    photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
   });
   photoSection.append(photoDiv);
 }

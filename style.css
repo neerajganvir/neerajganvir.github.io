@@ -156,7 +156,7 @@ section.side-bar a {
   padding-top: 10rem;
 }
 
-#photos {
+#photos, #films {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -175,6 +175,60 @@ section.side-bar a {
 
 #nescafe{
   background-image: url("/images/nescafe.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#kidnapping{
+  background-image: url("/images/TheKidnapping.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#betrayal{
+  background-image: url("/images/TheBetrayal.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pendrive{
+  background-image: url("/images/ThePenDrive.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#code{
+  background-image: url("/images/TheCode.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wwtawwtal{
+  background-image: url("/images/wwtawwtal.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#clinic{
+  background-image: url("/images/TheClinic.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#heartbreak{
+  background-image: url("/images/TheHeartbreak.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#breakfast{
+  background-image: url("/images/TheBreakfast.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -397,6 +451,11 @@ footer > span {
     min-width: 60vw;
   }
 
+  #films div {
+    min-height: 20vh;
+    min-width: 60vw;
+  }
+
   div.project-title {
     font-size: 2rem;
   }
@@ -409,6 +468,10 @@ footer > span {
     min-width: 60vw;
   }  
   #photos div {
+    min-height: 25vh;
+    min-width: 60vw;
+  }  
+  #films div {
     min-height: 25vh;
     min-width: 60vw;
   }  
