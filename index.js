@@ -98,17 +98,20 @@ hamburger.addEventListener("click", (event) => {
 });
 
 //Loading photos
-var maxPhotoNumber = 21;
-for(let p=1; p<=maxPhotoNumber; p++){
-  
-  var photoDiv = document.createElement("div");
-  photoDiv.setAttribute("id", "photo"+p);
-  photoDiv.setAttribute("class", "photo-container");
-  photoURL = "url('./photos/photo"+p+".jpeg')";
-  photoDiv.style.backgroundImage = photoURL;
-  photoDiv.addEventListener("click",(event)=>{
-    PhotoViewer.style.display="grid";
-    photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
-  });
-  photoSection.append(photoDiv);
+if(photoSection){
+  var maxPhotoNumber = 21;
+  for(let p=1; p<=maxPhotoNumber; p++){
+    
+    var photoDiv = document.createElement("div");
+    photoDiv.setAttribute("id", "photo"+p);
+    photoDiv.setAttribute("class", "photo-container");
+    photoURL = "url('./photos/photo"+p+".jpeg')";
+    photoDiv.style.backgroundImage = photoURL;
+    photoDiv.addEventListener("click",(event)=>{
+      PhotoViewer.style.display="grid";
+      photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
+    });
+    photoSection.append(photoDiv);
+  }
 }
+
