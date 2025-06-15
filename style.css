@@ -518,6 +518,23 @@ footer > span {
     font-size: 2rem;
   }
 
+  .my-image-packageFront {
+  background-image: url("images/New Jersey New York Film and Photography 1.png");
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+  height: 50vh;
+  width: 20vw;
+}
+
+.my-image-packageBack {
+  background-image: url("images/New Jersey New York Film and Photography 2.png");
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+  height: 50vh;
+  width: 20vw;
+}
 }
 
 @media screen and (max-width: 1000px) {
@@ -533,6 +550,7 @@ footer > span {
     min-height: 25vh;
     min-width: 60vw;
   }  
+
 }
 
 @media screen and (min-width: 500px) {
@@ -544,4 +562,5 @@ footer > span {
   .close {
     display: none;
   }
+
 }
