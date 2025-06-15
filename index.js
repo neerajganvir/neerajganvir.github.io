@@ -110,6 +110,7 @@ if(photoSection){
     photoDiv.addEventListener("click",(event)=>{
       PhotoViewer.style.display="grid";
       photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
+      photoImage.setAttribute("alt", "Event photography by Neeraj Ganvir"); 
     });
     photoSection.append(photoDiv);
   }

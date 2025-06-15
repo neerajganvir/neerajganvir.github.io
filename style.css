@@ -244,6 +244,24 @@ section.side-bar a {
   padding-top: 10rem;
 }
 
+#photoServices {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#Packages {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 div.project-container {
   display: flex;
   justify-content: center;
@@ -297,8 +315,48 @@ div.photo-container {
   width: 20vw;
 }
 
+.my-image-photoServices {
+  background-image: url("images/New Jersey New York Photographer Neeraj Ganvir.jpg");
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+  height: 20vh;
+  width: 20vw;
+}
+
+.my-image-packageFront {
+  background-image: url("images/New Jersey New York Film and Photography 1.png");
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+  height: 70vh;
+  width: 30vw;
+}
+
+.my-image-packageBack {
+  background-image: url("images/New Jersey New York Film and Photography 2.png");
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+  height: 70vh;
+  width: 30vw;
+}
+
 .intro-content {
   text-align: justify;
+}
+
+.intro-content strong {
+background-color: transparent;
+font-weight: bold;
+font-size: 0.88rem;
+color: gold;
+}
+
+.intro-content p {
+background-color: transparent;
+font-weight: 300;
+font-size: 0.85rem;
 }
 
 #contact {
