@@ -329,8 +329,8 @@ div.photo-container {
   background-repeat: no-repeat;
   background-position:top;
   background-size: contain;
-  height: 70vh;
-  width: 30vw;
+  height: 50vh;
+  width: 25vw;
 }
 
 .my-image-packageBack {
@@ -338,8 +338,8 @@ div.photo-container {
   background-repeat: no-repeat;
   background-position:top;
   background-size: contain;
-  height: 70vh;
-  width: 30vw;
+  height: 50vh;
+  width: 25vw;
 }
 
 .intro-content {
@@ -518,6 +518,7 @@ footer > span {
   div.project-title {
     font-size: 2rem;
   }
+
 .my-image-packageFront {
   background-image: url("images/New Jersey New York Film and Photography 1.png");
   background-repeat: no-repeat;
