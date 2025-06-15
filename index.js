@@ -11,6 +11,8 @@ const videoiframe = document.getElementById("videoiframe");
 const photoSection = document.getElementById("photos");
 const photoImage = document.getElementById("photoImage");
 const PhotoViewer = document.getElementById("PhotoViewer");
+const Packages = document.getElementById("Packages");
+
 
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
@@ -115,4 +117,12 @@ if(photoSection){
     photoSection.append(photoDiv);
   }
 }
+
+// if(Packages){
+//   photoDiv.addEventListener("click",(event)=>{
+//       PhotoViewer.style.display="grid";
+//       photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
+//       photoImage.setAttribute("alt", "Event photography by Neeraj Ganvir"); 
+//     });
+// }
 

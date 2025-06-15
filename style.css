@@ -328,7 +328,7 @@ div.photo-container {
   background-image: url("images/New Jersey New York Film and Photography 1.png");
   background-repeat: no-repeat;
   background-position:top;
-  background-size: cover;
+  background-size: contain;
   height: 70vh;
   width: 30vw;
 }
@@ -337,7 +337,7 @@ div.photo-container {
   background-image: url("images/New Jersey New York Film and Photography 2.png");
   background-repeat: no-repeat;
   background-position:top;
-  background-size: cover;
+  background-size: contain;
   height: 70vh;
   width: 30vw;
 }
@@ -488,6 +488,7 @@ footer > span {
   div.project-title {
     font-size: 2rem;
   }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -517,24 +518,24 @@ footer > span {
   div.project-title {
     font-size: 2rem;
   }
-
-  .my-image-packageFront {
+.my-image-packageFront {
   background-image: url("images/New Jersey New York Film and Photography 1.png");
   background-repeat: no-repeat;
   background-position:top;
-  background-size: cover;
-  height: 50vh;
-  width: 30vw;
+  background-size: contain;
+  height: 40vh;
+  width: 40vw;
 }
 
 .my-image-packageBack {
   background-image: url("images/New Jersey New York Film and Photography 2.png");
   background-repeat: no-repeat;
   background-position:top;
-  background-size: cover;
-  height: 50vh;
-  width: 30vw;
+  background-size: contain;
+  height: 40vh;
+  width: 40vw;
 }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -550,7 +551,7 @@ footer > span {
     min-height: 25vh;
     min-width: 60vw;
   }  
-
+ 
 }
 
 @media screen and (min-width: 500px) {
