@@ -279,7 +279,7 @@ div.photo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--text-color);
+  
   min-height: 40vh;
   min-width: 40vw;
   margin: 20px;
@@ -294,7 +294,7 @@ div.photo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--text-color);
+  /*background-color: var(--text-color);*/
   min-height: 40vh;
   max-width: 40vw;
   margin: 20px;
