@@ -381,14 +381,14 @@ div.project-title {
 div.project-container:hover {
   transform: scale(1.03);
   cursor: pointer;
-  background-color: darkgoldenrod;
+  /*background-color: darkgoldenrod;*/
   font-size: xx-large;
 }
 
 div.photo-container:hover {
   transform: scale(1.03);
   cursor: pointer;
-  background-color: darkgoldenrod;
+  /*background-color: darkgoldenrod;*/
   font-size: xx-large;
 }
 
