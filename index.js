@@ -109,12 +109,33 @@ if(photoSection){
     photoDiv.setAttribute("class", "photo-container");
     photoURL = "url('./photos/photo"+p+".jpeg')";
     photoDiv.style.backgroundImage = photoURL;
+  
+    var newImage = document.createElement("img");
+    newImage.src = "./photos/photo"+p+".jpeg";
+    newImage.alt = 'Event Photography in NJ & NYC';
+    photoDiv.appendChild(newImage);
+   
     photoDiv.addEventListener("click",(event)=>{
       PhotoViewer.style.display="grid";
       photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
-      photoImage.setAttribute("alt", "Event photography by Neeraj Ganvir"); 
+      photoImage.setAttribute("alt", "Event cinematic photography by Neeraj Ganvir"); 
     });
+    
     photoSection.append(photoDiv);
+    // Ensure the div and image exist before proceeding
+if (photoDiv && newImage) {
+    // Get the dimensions of the div
+    const divWidth = photoDiv.offsetWidth;
+    const divHeight = photoDiv.offsetHeight;
+
+    // Set the image's dimensions to match the div's
+    newImage.style.width = divWidth + 'px';
+    newImage.style.height = divHeight + 'px';
+
+    // Optional: Use object-fit for better image scaling within the div
+    // This prevents distortion if the aspect ratios differ
+    newImage.style.objectFit = 'contain'; // or 'cover'
+}
   }
 }
 
