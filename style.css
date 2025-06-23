@@ -151,7 +151,7 @@ section.side-bar a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-top: 10rem;
 }
