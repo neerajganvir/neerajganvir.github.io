@@ -28,6 +28,18 @@ workProjects.forEach((project) => {
     }else if(project.dataset.film == true || project.dataset.film == "true"){
       let page = `./${project.getAttribute("id")}.html`;
       window.location.href = page;
+    }else if(project.dataset.godfirst == true || project.dataset.godfirst == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
+    }else if(project.dataset.filmframes == true || project.dataset.filmframes == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
+    }else if(project.dataset.events == true || project.dataset.events == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
+    }else if(project.dataset.food == true || project.dataset.food == "true"){
+      let page = `./${project.getAttribute("id")}.html`;
+      window.location.href = page;
     }else{//take it to the video reel
       videoiframe.setAttribute("src" , project.dataset.projectvideourl);
       videoreel.style.display="grid";
@@ -102,42 +114,88 @@ hamburger.addEventListener("click", (event) => {
 
 //Loading photos
 if(photoSection){
-  var maxPhotoNumber = 27;
-  for(let p=maxPhotoNumber; p>=1; p--){
-    
-    var photoDiv = document.createElement("div");
-    photoDiv.setAttribute("id", "photo"+p);
-    photoDiv.setAttribute("class", "photo-container");
-    photoURL = "url('./photos/photo"+p+".jpeg')";
-    photoDiv.style.backgroundImage = photoURL;
+  //console.log(window.location.href);
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+  var page = page.split(".")[0];
+
+  var maxPhotoNumber = 0;
+  var altText = "";
+  var identifier = "";
+
+  switch (page) {
+    case "godfirst":
+      identifier = "gf";
+      maxPhotoNumber = 14;
+      altText = "Temple Photography in jersey City, NJ & NY"
+     console.log(page);
+    break;
+   
+    case "filmframes":
+      identifier = "ff";
+      maxPhotoNumber = 6;
+      altText = "cinematic film stills portrait photography in NJ & NY"
+      console.log(page);
+    break;
+     
+    case "events":
+      identifier = "ev";
+      maxPhotoNumber = 19;
+      altText = "Birthday, Baby Shower, Engagement Event Photography in jersey City, NJ & NY"
+     console.log(page);
+    break;
   
-    var newImage = document.createElement("img");
-    newImage.src = "./photos/photo"+p+".jpeg";
-    newImage.alt = 'Cinematic Event Photography in NJ & NYC';
-    photoDiv.appendChild(newImage);
-   
-    photoDiv.addEventListener("click",(event)=>{
-      PhotoViewer.style.display="grid";
-      photoImage.setAttribute("src", "./photos/photo"+p+".jpeg"); 
-      photoImage.setAttribute("alt", "Event cinematic photography by Neeraj Ganvir"); 
-    });
-
-    photoSection.append(photoDiv);
-    if (photoDiv && newImage) {
-        // Get the dimensions of the div
-        //const divWidth = photoDiv.offsetWidth;
-        //const divHeight = photoDiv.offsetHeight;
-
-        // Set the image's dimensions to match the div's
-        newImage.style.width = 0 + 'px';
-        newImage.style.height = 0 + 'px';
-
-        // Optional: Use object-fit for better image scaling within the div
-        // This prevents distortion if the aspect ratios differ
-        newImage.style.objectFit = 'contain'; // or 'cover'
-    }
-   
+    case "food":
+      identifier = "fd";
+      maxPhotoNumber = 14;
+      altText = "Food Photography in jersey City, NJ & NY"
+     console.log(page);
+    break;
+  
+    default:
+    break;
   }
+ 
+  
+  
+
+if(maxPhotoNumber>0){
+  for(let p=maxPhotoNumber; p>=1; p--){
+      
+      var photoDiv = document.createElement("div");
+      photoDiv.setAttribute("id", identifier+"photo"+p);
+      photoDiv.setAttribute("class", "photo-container");
+      photoURL = "url('./photos/"+identifier+"photo"+p+".jpeg')";
+      photoDiv.style.backgroundImage = photoURL;
+    
+      var newImage = document.createElement("img");
+      newImage.src = "./photos/"+identifier+"photo"+p+".jpeg";
+      newImage.alt = altText;
+      photoDiv.appendChild(newImage);
+    
+      photoDiv.addEventListener("click",(event)=>{
+        PhotoViewer.style.display="grid";
+        photoImage.setAttribute("src", "./photos/"+identifier+"photo"+p+".jpeg"); 
+        photoImage.setAttribute("alt", altText); 
+      });
+
+      photoSection.append(photoDiv);
+      if (photoDiv && newImage) {
+          // Get the dimensions of the div
+          //const divWidth = photoDiv.offsetWidth;
+          //const divHeight = photoDiv.offsetHeight;
+
+          // Set the image's dimensions to match the div's
+          newImage.style.width = 0 + 'px';
+          newImage.style.height = 0 + 'px';
+
+          // Optional: Use object-fit for better image scaling within the div
+          // This prevents distortion if the aspect ratios differ
+          newImage.style.objectFit = 'contain'; // or 'cover'
+      }
+    }
+}
+  
 }
 
  
