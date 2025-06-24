@@ -13,6 +13,37 @@ const photoImage = document.getElementById("photoImage");
 const PhotoViewer = document.getElementById("PhotoViewer");
 const Packages = document.getElementById("Packages");
 
+const resizeImages = () => {
+//console.log("in resize");
+ if(photoSection){
+  allDivs = photoSection.children;
+  //console.log(allDivs);
+
+  for (const div of allDivs) {
+    //console.log(div.children);
+    imageInDiv = div.querySelector("img");
+    //console.log(imageInDiv);
+     if (div && imageInDiv) {
+        // Get the dimensions of the div
+        const divWidth = div.offsetWidth;
+        const divHeight = div.offsetHeight;
+
+        // Set the image's dimensions to match the div's
+        imageInDiv.style.width = divWidth + 'px';
+        imageInDiv.style.height = divHeight + 'px';
+
+        // Optional: Use object-fit for better image scaling within the div
+        // This prevents distortion if the aspect ratios differ
+        imageInDiv.style.objectFit = 'contain'; // or 'cover'
+    }
+  }
+ }
+}
+
+window.onresize = function() {
+  // Call your responsive function here
+  resizeImages(); 
+};
 
 workProjects.forEach((project) => {
   project.addEventListener("click", (event) => {
@@ -85,6 +116,7 @@ for (let i = 0; i < projectDivs.length; i++) {
 
 logo.addEventListener("click", (event) => {
   window.location.href = "./index.html#Work";
+   resizeImages();
 });
 
 hamburger.addEventListener("click", (event) => {
@@ -108,12 +140,12 @@ if(photoSection){
     photoDiv.setAttribute("id", "photo"+p);
     photoDiv.setAttribute("class", "photo-container");
     photoURL = "url('./photos/photo"+p+".jpeg')";
-    photoDiv.style.backgroundImage = photoURL;
+    //photoDiv.style.backgroundImage = photoURL;
   
     var newImage = document.createElement("img");
     newImage.src = "./photos/photo"+p+".jpeg";
-    newImage.alt = 'Event Photography in NJ & NYC';
-   // photoDiv.appendChild(newImage);
+    newImage.alt = 'Cinematic Event Photography in NJ & NYC';
+    photoDiv.appendChild(newImage);
    
     photoDiv.addEventListener("click",(event)=>{
       PhotoViewer.style.display="grid";
@@ -122,21 +154,26 @@ if(photoSection){
     });
 
     photoSection.append(photoDiv);
-  }
     if (photoDiv && newImage) {
-    // Get the dimensions of the div
-    //const divWidth = photoDiv.offsetWidth;
-    //const divHeight = photoDiv.offsetHeight;
+        // Get the dimensions of the div
+        const divWidth = photoDiv.offsetWidth;
+        const divHeight = photoDiv.offsetHeight;
 
-    // Set the image's dimensions to match the div's
-    //newImage.style.width = divWidth + 'px';
-    //newImage.style.height = divHeight + 'px';
+        // Set the image's dimensions to match the div's
+        newImage.style.width = divWidth + 'px';
+        newImage.style.height = divHeight + 'px';
 
-    // Optional: Use object-fit for better image scaling within the div
-    // This prevents distortion if the aspect ratios differ
-    //newImage.style.objectFit = 'contain'; // or 'cover'
+        // Optional: Use object-fit for better image scaling within the div
+        // This prevents distortion if the aspect ratios differ
+        newImage.style.objectFit = 'contain'; // or 'cover'
+    }
+   
+  }
+    resizeImages();
 }
-}
+
+ 
+
 
 // if(Packages){
 //   photoDiv.addEventListener("click",(event)=>{
