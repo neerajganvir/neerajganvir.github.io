@@ -127,28 +127,28 @@ if(photoSection){
     case "godfirst":
       identifier = "gf";
       maxPhotoNumber = 14;
-      altText = "Temple Photography in jersey City, NJ & NY"
+      altText = "Decorated temple altar during Hindu festival – Puja, Aarti, Ritual | Temple Photography in jersey City, NJ & NY"
      console.log(page);
     break;
    
     case "filmframes":
       identifier = "ff";
       maxPhotoNumber = 6;
-      altText = "cinematic film stills portrait photography in NJ & NY"
+      altText = "Cinematic close-up of actor in moody lighting – indie film still by Neeraj Ganvir | Fashion model posing in Manhattan | cinematic film stills portrait photography in NJ & NY"
       console.log(page);
     break;
      
     case "events":
       identifier = "ev";
       maxPhotoNumber = 19;
-      altText = "Birthday, Baby Shower, Engagement Event Photography in jersey City, NJ & NY"
+      altText = "Birthday Mom-to-be cutting cake, Decorated Baby Shower, Engagement, Candid mother-son Event Photography in jersey City, NJ & NY"
      console.log(page);
     break;
   
     case "food":
       identifier = "fd";
       maxPhotoNumber = 14;
-      altText = "Food Photography in jersey City, NJ & NY"
+      altText = "Gourmet entrée plated at NYC restaurant – cinematic food photography jersey City, NJ & NY"
      console.log(page);
     break;
   
