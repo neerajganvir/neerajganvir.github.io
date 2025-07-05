@@ -140,7 +140,7 @@ if(photoSection){
      
     case "events":
       identifier = "ev";
-      maxPhotoNumber = 19;
+      maxPhotoNumber = 22;
       altText = "Birthday Mom-to-be cutting cake, Decorated Baby Shower, Engagement, Candid mother-son Event Photography in jersey City, NJ & NY"
      console.log(page);
     break;
